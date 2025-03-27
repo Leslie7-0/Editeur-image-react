@@ -1,0 +1,153 @@
+.application {
+  max-width: 1000px; /* Largeur réduite pour plus de concentration */
+  margin: 0 auto;
+  padding: 20px 15px; /* Padding réduit */
+  font-family: 'Segoe UI', system-ui, sans-serif; /* Stack de polices amélioré */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #f8fafc; /* Fond légèrement coloré */
+}
+
+.en-tete-application {
+  text-align: center;
+  margin: 0 auto 30px; /* Marge réduite */
+  padding: 15px 0;
+  width: 100%;
+}
+
+.en-tete-application h1 {
+  color: #2c3e50;
+  margin: 0;
+  font-size: 2.2rem; /* Taille réduite */
+  font-weight: 600;
+  padding-bottom: 8px;
+  position: relative;
+}
+
+.en-tete-application h1::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px; /* Largeur réduite */
+  height: 3px; /* Épaisseur réduite */
+  background: linear-gradient(90deg, #4a90e2, #28a745);
+  border-radius: 2px;
+}
+
+.contenu-principal {
+  background-color: #ffffff;
+  border-radius: 14px; /* Border-radius ajusté */
+  padding: 30px; /* Padding réduit */
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06); /* Ombre plus subtile */
+  flex: 1;
+  border: 1px solid #edf2f7; /* Bordure subtile */
+}
+
+/* Conteneur des images avant/après */
+.comparaison-images {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px; /* Espacement réduit */
+  margin-bottom: 30px;
+  align-items: flex-start; /* Alignement en haut */
+}
+
+.zone-image {
+  flex: 1;
+  min-width: 0; /* Permet le rétrécissement */
+  background: #f9fafb; /* Fond légèrement gris */
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.zone-image h2 {
+  color: #3a506b;
+  font-size: 1.3rem; /* Taille réduite */
+  margin: 0 0 15px 0; /* Marge ajustée */
+  font-weight: 500;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #e2e8f0; /* Bordure plus fine */
+}
+
+/* Styles pour les images */
+.zone-image img {
+  max-width: 100%;
+  max-height: 350px; /* Hauteur réduite */
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 6px;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* Animation pour le titre */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.en-tete-application h1 {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+/* Version mobile */
+@media (max-width: 768px) {
+  .application {
+    padding: 15px 10px;
+  }
+  
+  .contenu-principal {
+    padding: 20px;
+    border-radius: 12px;
+  }
+  
+  .en-tete-application h1 {
+    font-size: 1.8rem;
+    padding-bottom: 6px;
+  }
+  
+  .comparaison-images {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .zone-image {
+    width: 100%;
+    padding: 12px;
+  }
+  
+  .zone-image h2 {
+    font-size: 1.2rem;
+  }
+}
+
+/* Améliorations pour l'éditeur d'image */
+.editeur-image {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+  background: #f1f5f9;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Style pour le mode recadrage */
+.ReactCrop__crop-selection {
+  border: 2px dashed #4a90e2;
+  box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.4);
+}
+
+/* Placeholder quand aucune image */
+.placeholder {
+  color: #94a3b8;
+  font-style: italic;
+  padding: 40px;
+  text-align: center;
+}

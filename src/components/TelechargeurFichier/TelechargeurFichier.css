@@ -1,0 +1,65 @@
+.telechargeur {
+  border: 2px dashed #4a90e2;
+  border-radius: 12px;
+  padding: 40px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background-color: #f8fafc;
+  margin: 20px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.telechargeur.active {
+  background-color: #e1f0ff;
+  border-color: #2a65b0;
+}
+
+.telechargeur:hover {
+  background-color: #f0f7ff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(74, 144, 226, 0.2);
+}
+
+.content-telechargeur {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.icon-telechargeur {
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e1f0ff;
+  border-radius: 50%;
+  margin-bottom: 16px;
+}
+
+.icon-telechargeur svg {
+  stroke-width: 1.5;
+}
+
+.telechargeur h3 {
+  color: #1e3a8a;
+  font-size: 1.25rem;
+  margin: 0;
+  font-weight: 600;
+}
+
+.telechargeur p {
+  color: #64748b;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+.formats-supportes {
+  font-size: 0.85rem;
+  color: #94a3b8;
+  margin-top: 8px;
+  font-style: italic;
+}
